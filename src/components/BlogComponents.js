@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from 'react-router-dom'
 import styled from "styled-components";
 
-const Box = styled(NavLink)`
+const Box = styled(motion.a)`
   width: calc(10rem + 15vw);
   text-decoration: none;
   height: 20rem;
@@ -36,7 +37,6 @@ const Image = styled.div`
     border: 1px solid ${(props) => props.theme.body};
   }
 `;
-
 const Title = styled.h3`
   color: inherit;
   padding: 0.5rem 0;
@@ -49,7 +49,6 @@ const Title = styled.h3`
     border-bottom: 1px solid ${(props) => props.theme.body};
   }
 `;
-
 const HashTags = styled.div`
   padding: 0.5rem 0;
 `;
@@ -60,20 +59,38 @@ const Date = styled.span`
   padding: 0.5rem 0;
 `;
 
-const BlogComponents = (props) => {
+const Container = styled(motion.div)``;
+
+// Framer motion configuration
+const Item = {
+  hidden: {
+    scale: 0,
+  },
+  show: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+    },
+  },
+};
+
+const BlogComponent = (props) => {
   const { name, tags, date, imgSrc, link } = props.blog;
   return (
-    <Box target="_blank" to={{ pathname: link }}>
-      <Image img={imgSrc} />
-      <Title>{name}</Title>
-      <HashTags>
-        {tags.map((t, id) => {
-          return <Tag key={id}>#{t}</Tag>;
-        })}
-      </HashTags>
-      <Date>{date}</Date>
-    </Box>
+    <Container variants={Item}>
+      <Box target="_blank" href={`${link}`}>
+        <Image img={imgSrc} />
+        <Title>{name}</Title>
+        <HashTags>
+          {tags.map((t, id) => {
+            return <Tag key={id}>#{t}</Tag>;
+          })}
+        </HashTags>
+        <Date>{date}</Date>
+      </Box>
+    </Container>
   );
 };
 
-export default BlogComponents;
+export default BlogComponent;

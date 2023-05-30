@@ -7,6 +7,7 @@ const Logo = styled.h1`
   color: ${(props) =>
     props.color === "dark" ? DarkTheme.text : DarkTheme.body};
   font-family: "Pacifico", cursive;
+  cursor: pointer;
 
   position: fixed;
   left: 2rem;
@@ -15,7 +16,14 @@ const Logo = styled.h1`
 `;
 
 const LogoComponent = (props) => {
-  return <Logo color={props.theme}>AS</Logo>;
+  return (
+    <Logo
+      onClick={() => window.open("https://rxresu.me/r/YXuPsXoP", "_blank")}
+      color={props.theme}
+    >
+      AS
+    </Logo>
+  );
 };
 
 export default LogoComponent;

@@ -1,9 +1,9 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { Github, Twitter, LinkedIn, Instagram } from "../components/AllSvgs";
-import styled from "styled-components";
-import { DarkTheme } from "../components/Themes";
 import { motion } from "framer-motion";
+import React from "react";
+// import { NavLink } from 'react-router-dom'
+import styled from "styled-components";
+import { Github, Instagram, LinkedIn, Twitter } from "../components/AllSvgs";
+import { DarkTheme } from "../components/Themes";
 
 const Icons = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const Icons = styled.div`
 
   z-index: 3;
 
-  &>*: not(: last-child) {
+  & > *:not(:last-child) {
     margin: 0.5rem 0;
   }
 `;
@@ -36,68 +36,72 @@ const SocialIcons = (props) => {
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1 }}
       >
-        <NavLink
+        <a
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://github.com/AdityaCubicles45" }}
+          href={"https://github.com/AdityaCubicles45"}
+          rel="noopener noreferrer"
         >
           <Github
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
           />
-        </NavLink>
+        </a>
       </motion.div>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1.2 }}
       >
-        <NavLink
+        <a
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://twitter.com/Aditya04183" }}
+          href={"https://twitter.com/Aditya04183"}
+          rel="noopener noreferrer"
         >
           <Twitter
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
           />
-        </NavLink>
+        </a>
       </motion.div>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1.4 }}
       >
-        <NavLink
+        <a
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://www.linkedin.com/in/aadityasingh18/" }}
+          href={"https://www.linkedin.com/in/aadityasingh18/"}
+          rel="noopener noreferrer"
         >
           <LinkedIn
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
           />
-        </NavLink>
+        </a>
       </motion.div>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1.6 }}
       >
-        <NavLink
+        <a
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://www.instagram.com/adityasingh.dev/" }}
+          href={"https://www.instagram.com/adityasingh.dev/"}
+          rel="noopener noreferrer"
         >
           <Instagram
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
           />
-        </NavLink>
+        </a>
       </motion.div>
 
       <Line
