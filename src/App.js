@@ -1,49 +1,51 @@
 import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { lazy, Suspense } from "react";
+import GlobalStyle from "./globalStyles";
 import { ThemeProvider } from "styled-components";
 import { lightTheme } from "./components/Themes";
-import { AnimatePresence } from "framer-motion/dist/framer-motion";
-import GlobalStyle from "./globalStyles";
+import Loading from "./subComponents/Loading";
 import React from "react";
 
 //Components
-import Main from "./components/Main";
-import AboutPage from "./components/AboutPage";
-import BlogPage from "./components/BlogPage";
-import WorkPage from "./components/WorkPage";
-import MySkillPage from "./components/MySkillPage";
-import SoundBar from "./subComponents/SoundBar";
+const Main = lazy(() => import("./components/Main"));
+const AboutPage = lazy(() => import("./components/AboutPage"));
+const MySkillsPage = lazy(() => import("./components/MySkillPage"));
+const BlogPage = lazy(() => import("./components/BlogPage"));
+const WorkPage = lazy(() => import("./components/WorkPage"));
+const SoundBar = lazy(() => import("./subComponents/SoundBar"));
 
 function App() {
   const location = useLocation();
+
   return (
     <>
       <GlobalStyle />
 
       <ThemeProvider theme={lightTheme}>
-        <SoundBar />
+        <Suspense fallback={<Loading />}>
+          <SoundBar />
+          {/* Changed prop from exitBefore to mode */}
+          <AnimatePresence mode="wait">
+            {/* Changed Switch to Routes */}
 
-        {/* For framer-motion animation on page change! */}
-        {/* Changed prop from exitBefore to mode */}
-        <AnimatePresence mode="wait">
-          {/* Changed Switch to Routes */}
+            <Routes location={location} key={location.pathname}>
+              {/* Changed component to element */}
 
-          <Routes key={location.pathname} location={location}>
-            {/* Changed component to element */}
+              <Route path="/" element={<Main />} />
 
-            <Route path="/" element={<Main />} />
+              <Route path="/about" element={<AboutPage />} />
 
-            <Route path="/about" element={<AboutPage />} />
+              <Route path="/blog" element={<BlogPage />} />
 
-            <Route path="/blog" element={<BlogPage />} />
+              <Route path="/work" element={<WorkPage />} />
 
-            <Route path="/work" element={<WorkPage />} />
+              <Route path="/skills" element={<MySkillsPage />} />
 
-            <Route path="/skills" element={<MySkillPage />} />
-            {/* Below is to catch all the other routes and send the user to main component,
-you can add custom 404 component or message instead of Main component*/}
-            <Route path="*" element={<Main />} />
-          </Routes>
-        </AnimatePresence>
+              <Route path="*" element={<Main />} />
+            </Routes>
+          </AnimatePresence>
+        </Suspense>
       </ThemeProvider>
     </>
   );

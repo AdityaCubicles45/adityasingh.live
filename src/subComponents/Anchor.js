@@ -1,10 +1,32 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
+import { useEffect, useRef } from "react";
+
 import { Anchor, Link } from "../components/AllSvgs";
+import { mediaQueries } from "../components/Themes";
 
 const Container = styled.div`
   position: relative;
+  ${mediaQueries(40)`
+    
+    display:none;
+
+
+
+  `};
 `;
+
+const PreDisplay = styled.div`
+  position:absolute;
+  top:0;
+  right:2rem;
+
+ 
+
+
+}
+`;
+
 const Slider = styled.div`
   position: fixed;
   top: 0;
@@ -14,16 +36,9 @@ const Slider = styled.div`
   align-items: center;
   flex-direction: column;
   transform: translateY(-100%);
-
   .chain {
     transform: rotate(135deg);
   }
-`;
-
-const PreDisplay = styled.div`
-  position: absolute;
-  top: 0;
-  right: 2rem;
 `;
 
 const AnchorComponent = (props) => {
@@ -48,12 +63,10 @@ const AnchorComponent = (props) => {
         hiddenRef.current.style.display = "block";
       }
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   return (
     <Container>
       <PreDisplay ref={hiddenRef} className="hidden">
@@ -64,6 +77,7 @@ const AnchorComponent = (props) => {
           return (
             <Link
               key={id}
+              style={{ padding: "0.1rem 0" }}
               width={25}
               height={25}
               fill="currentColor"
