@@ -10,7 +10,7 @@ import PowerButton from "../subComponents/PowerButton";
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
 import { YinYang } from "./AllSvgs";
-import BigTitlte from "../subComponents/BigTitle";
+import BigTitle from "../subComponents/BigTitle";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -89,7 +89,7 @@ const WorkPage = () => {
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
 
-        <BigTitlte text="WORK" top="10%" right="20%" />
+        <BigTitle text="WORK" top="10%" right="20%" />
       </Box>
     </ThemeProvider>
   );

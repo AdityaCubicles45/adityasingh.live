@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Box = styled(NavLink)`
