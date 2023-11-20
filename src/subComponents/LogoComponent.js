@@ -24,7 +24,7 @@ const Logo = styled.h1`
 const LogoComponent = (props) => {
   return (
     <Logo
-      onClick={() => window.open("https://rxresu.me/r/YXuPsXoP", "_blank")}
+      onClick={() => window.open("https://rxresu.me/aditya.singh456m/aaditya-singh", "_blank")}
       color={props.theme}
     >
       AS
