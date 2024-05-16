@@ -112,18 +112,16 @@ const AboutPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}
           >
-            I'm a Full Stack Web/Blockchain Developer and Flutter Developer
-            located in India. I love to create Simple yet Modern Websites with
-            Great User Experience and Responsiveness.
+            Hello! I'm a passionate Full Stack Web and Blockchain Developer based in India. 
+            My journey in technology is fueled by a love for crafting elegant, modern websites 
+            that prioritize exceptional UX/UI and seamless responsiveness.
             <br />
             <br />
-            I'm interested in the whole Open Source Stack like trying new things
-            and building great projects. I'm an Independent Open Source
-            Contributor and Blogger. I love to contribute in public domains as
-            well as I Love to Develop Advanced Apps and also I Love Reading
-            Books. <br />
-            <br />I believe everything is an Art when you put your Consciousness
-            in it. You can connect with me via Social Links.{" "}
+            I thrive on exploring the vast world of Blockchain, constantly experimenting with new technologies and building innovative projects.
+             As an avid Blockchain Contributor and Blogger, I take pride in sharing knowledge and collaborating on public domain projects. 
+             My passion extends to developing cutting-edge applications. <br />
+            <br />To me, every project is a work of art, brought to life through dedication and creativity. 
+            Let's connect and create something amazing together.{" "}
           </Main>
           <BigTitle text="ABOUT" top="10%" left="5%" />
         </Box>
