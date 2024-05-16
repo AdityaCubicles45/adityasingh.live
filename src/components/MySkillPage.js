@@ -179,9 +179,9 @@ const MySkillsPage = () => {
               </ul>
             </Description>
             <Description>
-              <strong>Tools</strong> <br />
+              <strong>Skills</strong> <br />
               <ul>
-                <li>Solidity, Remix IDEs, Ethereum, Web3.js</li>
+                <li>Solidity, Rust, ZK-Proof, Rollups, Solana, Polygon, Avalanche, Chainlink etc</li>
               </ul>
             </Description>
           </Main>
@@ -196,13 +196,13 @@ const MySkillsPage = () => {
             <Description>
               <strong>Skills</strong> <br />
               <p>
-                Html, Css, Js, React, Redux, Node.js, Bootstrap, Tailwind,
-                Next.js, Dart, Flutter etc.
+                JavaScript, TypeScript, React, Express, Next.js, Node.js, Tailwind,
+                MongoDB, Prisma, Shadcn UI etc.
               </p>
             </Description>
             <Description>
               <strong>Tools</strong> <br />
-              <p>VScode, Github, Codepen, DartPad etc.</p>
+              <p>VScode, Github, ZED, Docker, AWS, Canva, Notion, Figma etc.</p>
             </Description>
           </Main>
           <BigTitle text="Skills" top="80%" right="30%" />
