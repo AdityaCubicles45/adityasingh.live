@@ -187,7 +187,7 @@ const MySkillsPage = () => {
           </Main>
           <Main>
             <Title>
-              <Develope width={40} height={40} /> Frontend Developer
+              <Develope width={40} height={40} /> Full Stack Developer
             </Title>
             <Description>
               I love to create modern design which speaks, Yet keep it clean,
