@@ -206,11 +206,11 @@ const Intro = () => {
         <Text>
           <h1>Hi,</h1>
 
-          <h3>I'm Aditya Singh.</h3>
+          <h3>I'm Aaditya Singh.</h3>
 
           <h6>
-            A Codoholic With Focus On Building Modern and Responsive Web And
-            Mobile Applications.
+          I craft secure and innovative blockchain solutions. 
+          I'm passionate about decentralization and building the future of web3.
           </h6>
         </Text>
       </SubBox>
