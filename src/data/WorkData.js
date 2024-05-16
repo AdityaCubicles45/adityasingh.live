@@ -1,62 +1,62 @@
 export const Work = [
   {
     id: 1,
-    name: "GitCode",
+    name: "AetherWallet (formerly Unwallet)",
     description:
-      "It is build on top of the React JS, with styledComponents and Polygon Blockchain Technology",
-    tags: ["react", "tailwind", "polygon"],
+      "Revolutionizing web3 onboarding and account management. Our seedless, gasless multi-chain smart wallet with native on-chain domains simplifies user experience.",
+    tags: ["NextJS", "TypeScript", "PassKey", "Solidity", "Rust"],
 
-    demo: "https://www.engineeriansstudios.live/",
-    github: "https://github.com/AdityaCubicles45/Gitcode",
+    demo: "https://unwallet.me/",
+    github: "https://github.com/AdityaCubicles45/Web3Pay",
   },
   {
     id: 2,
-    name: "Eth-Hoster",
+    name: "Tradier",
     description:
-      "A Decentralized Domain website build in ReactJS and Ethereum Chain. With searching and filtering functionalities.",
-    tags: ["react", "Ethereum"],
+      "A decentralized bot trading platform revolutionizing financial markets. It empowers users to execute automated trades securely, transparently, and without intermediaries.",
+    tags: ["NextJS", "Chainlink", "Solidity", "Avalanche"],
 
-    demo: "https://eth-hoster.vercel.app/",
-    github: "https://github.com/AdityaCubicles45/Eth-Hoster",
+    demo: "https://scaling-eth-hazel.vercel.app/marketplace",
+    github: "https://github.com/AdityaCubicles45/Scaling-eth",
   },
-  //   {
-  //     id: 3,
-  //     name: "Dev.to Clone",
-  //     description:
-  //       "A clone of Dev.to build using ReactJS. With realtime fetching of articles from dev.to using API.",
-  //     tags: ["react", "api", "sass"],
-
-  //     demo: "http://devto-clone-codebucks27.vercel.app/",
-  //     github: "https://github.com/codebucks27/devto-clone",
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Sidebar Menu",
-  //     description:
-  //       "A cool looking sidebar menu build using ReactJS and styledComponents.It has really smooth animations.",
-  //     tags: ["react", "styledComponents", "react-router"],
-
-  //     demo: "https://react-sidebar.vercel.app/",
-  //     github: "https://github.com/codebucks27/react-sidebar",
-  //   },
   {
     id: 3,
-    name: "Tindog - Dating App",
+    name: "Convoia",
     description:
-      "A dating app build using Html, CSS and Bootstrap and for smooth User Experiences.",
-    tags: ["Html", "Css", "Bootstrap"],
+      "Your gateway to the future of communication and NFT discovery. With our decentralized platform built on XMTP, AirStack, Polygon, and Arbitrum, we redefine chatting while revolutionizing NFT searching.",
+    tags: ["NextJS", "TypeScript", "XMTP", "TheGraph", "Airstack"],
 
-    demo: "https://tindog-umber.vercel.app/",
-    github: "https://github.com/AdityaCubicles45/tindog",
+    demo: "https://convoia.vercel.app/",
+    github: "https://github.com/AdityaCubicles45/Convoia",
   },
   {
     id: 4,
-    name: "Unites Manpower",
+    name: "GitCode-v2",
     description:
-      "A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
-    tags: ["react", "react-router", "css"],
+      "Empowering sustainable open-source development. Our platform streamlines funding through automated donation distribution based on unbiased commit evaluation.",
+    tags: ["NextJS", "Chainlink", "ICP", "Solidity"],
 
-    demo: "https://unites-manpower.vercel.app/",
-    github: "https://github.com/AdityaCubicles45/Unites-Manpower",
+    demo: "https://gitcode-v2.vercel.app/",
+    github: "https://github.com/AdityaCubicles45/Gitcode-v2",
+  },
+  {
+    id: 5,
+    name: "GitCode",
+    description:
+      "Revolutionizing file sharing and communication. Say goodbye to centralized vulnerabilities, geographical restrictions, and third-party control.",
+    tags: ["React", "Huddle01", "Polygon", "Solidity"],
+
+    demo: "https://gitcode.vercel.app/",
+    github: "https://github.com/AdityaCubicles45/Gitcode",
+  },
+  {
+    id: 6,
+    name: "AvaxGods",
+    description:
+      "Our Web 3.0 multiplayer game, pioneering the play-to-earn and learn-to-earn models. Unlike others, we offer 10 free NFTs to start, empowering the young generation to play and earn from the outset.",
+    tags: ["React", "EtherJS", "Polygon", "Solidity"],
+
+    demo: "https://nft-based-game.vercel.app/",
+    github: "https://github.com/AdityaCubicles45/nft_based_game",
   },
 ];
